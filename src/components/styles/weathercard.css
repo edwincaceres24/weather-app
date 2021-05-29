@@ -8,13 +8,19 @@
     padding: 2rem;
 }
 
-.weather--card-info-container{
-    display: flex;
-    align-items: center;
-}
+
 
 #block--container{
     margin-top: 2rem;
     display: grid;
     place-items: center;
+}
+.weather--card-badge{
+    color:white;
+    background-color: #E9880E;
+    border-radius: 25px;
+}
+.weather--card-degree{
+    font-size: 4rem;
+    font-weight: 700;
 }

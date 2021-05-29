@@ -13,6 +13,7 @@ class UpperSection extends Component {
             city: "",
             country: "",
             degree: "",
+            degreeIcon:"",
             degreeGrade: "",
             description: ""
         }
@@ -52,6 +53,7 @@ class UpperSection extends Component {
         const city = document.getElementById("city--selected");
         // this.citySelected = city
         this.fetchData(city.value)
+
 
     }
     render() {
