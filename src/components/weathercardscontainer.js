@@ -23,6 +23,7 @@ class WeatherCardsContainer extends Component{
         }
     }
     componentDidMount() {
+        console.log(Boolean(this.state.data.id))
         this.fetchData(this.props.city)
         console.log("Did Mount")
         
@@ -33,7 +34,7 @@ class WeatherCardsContainer extends Component{
         if(prevProps.city !==this.props.city){
             console.log("Calling API Again")
             this.fetchData(this.props.city)
-            
+            console.log(Boolean(this.state.data.id))
         }
     }
  
@@ -67,26 +68,29 @@ class WeatherCardsContainer extends Component{
            
     }
 render(){
-    // if(this.state.loading===true){
-    //     return "Loading"
-    // }
-    // if(this.state.error){
-    //     return("Error")
-    // }
-    // else{
-    //     return "Mundo " + this.props.city
-    // }
-    return(
-        <WeatherCard 
+    if(this.state.loading===true){
+        return "Loading.."
+    }
+    if(this.state.error){
+        return("Error")
+    }
+    if(Boolean(this.state.data.id)){
+        
+        return(
+            <WeatherCard 
             city={this.state.data.city}
             country={this.state.data.country}
             degree={this.state.data.degree}
             degreeGrade={this.state.data.degreeGrade}
             degreeIcon={this.state.data.degreeIcon}
             description={this.state.data.description}
-        />
-    )
-}
+            />
+            )
+        }
+        // else{
+        //     return "Mundo " + this.props.city
+        // }
+    }
 }
 
 
