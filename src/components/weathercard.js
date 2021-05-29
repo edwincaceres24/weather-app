@@ -13,9 +13,14 @@ class WeatherCard extends Component {
                 </div>
                 <div className="weather--degree-container d-flex align-items-start">
                 <h2 className="weather--card-degree">{this.props.degree}</h2> 
-                <span className="mt-3">{this.props.degreeGrade}</span>
+                <span className="mt-1 fs-1">{this.props.degreeGrade}</span>
                 </div>
-                <h3 className="text-capitalize">{this.props.description}</h3>
+                <figure>
+                    <img src={`http://openweathermap.org/img/wn/${this.props.degreeIcon}@4x.png`}alt={this.props.city} />
+                <figcaption>
+                <h3 className="text-capitalize mb-1">{this.props.description}</h3>
+                </figcaption>
+                </figure>
             </article>
         )
     }
