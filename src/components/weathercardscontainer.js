@@ -23,23 +23,16 @@ class WeatherCardsContainer extends Component{
         }
     }
     componentDidMount() {
-        console.log(Boolean(this.state.data.id))
-        this.fetchData(this.props.city)
-        console.log("Did Mount")
-        
+        this.fetchData(this.props.city)        
     }
-    componentDidUpdate(prevProps,prevState){
-        
-    
+    componentDidUpdate(prevProps){
         if(prevProps.city !==this.props.city){
-            console.log("Calling API Again")
             this.fetchData(this.props.city)
-            console.log(Boolean(this.state.data.id))
         }
     }
  
     fetchData = async (city)=>{
-        const mainAPI = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${API_KEY}`;
+        const mainAPI = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${API_KEY}`;
         try {
             await fetch(mainAPI)
             .then(response => response.json())
@@ -87,9 +80,6 @@ render(){
             />
             )
         }
-        // else{
-        //     return "Mundo " + this.props.city
-        // }
     }
 }
 
