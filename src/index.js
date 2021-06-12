@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import UpperSection from '../src/components/uppersection.js';
+import App from '../src/components/app.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UpperSection />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

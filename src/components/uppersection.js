@@ -23,7 +23,7 @@ class UpperSection extends Component {
         <section className="container">
             <div className="d-flex align-items-center flex-column">
             <h1 className="main-title mt-4">Simple Weather App</h1>
-            <p >Write down the city you like to know it current time</p>
+            <p >Here you can search a city</p>
             <form className="d-flex flex-row ">
                 <input  className="main--info-button" placeholder="Search for a city" id="city--selected" />
                 <button className="btn btn-danger ms-4" onClick={this.handleClick}>Submit</button>
