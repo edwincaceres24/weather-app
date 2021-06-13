@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import './styles/uppersection.css';
 import WeatherCardsContainer from "./weathercardscontainer.js";
-
+import Button from './button.js'
 
 class UpperSection extends Component {
     constructor(props){
@@ -26,7 +26,7 @@ class UpperSection extends Component {
             <p >Here you can search a city</p>
             <form className="d-flex flex-row ">
                 <input  className="main--info-button" placeholder="Search for a city" id="city--selected" />
-                <button className="btn btn-danger ms-4" onClick={this.handleClick}>Submit</button>
+                <Button clickevent={this.handleClick} />
             </form>
         </div>
         </section>

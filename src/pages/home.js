@@ -6,13 +6,13 @@ import './styles/pages.css';
 function HomePage(){
   return(      
     <section className="mt-5">
-      <h1 className="text-center mb-4">Please, choose what do you want to do</h1>
+      <h1 className="text-center mb-4">Please, select an option</h1>
       <div className="d-flex flex-column align-items-center btn-container">
       <Link to="./city-search">
-        <button class="btn btn-success">Select single city</button>
+        <span className="btn btn-success">Select single city</span>
       </Link>
-      <Link to="./city-search">
-        <button className="btn btn-success">Select multiple city</button>
+      <Link to="./daily-forecast">
+        <span className="btn btn-success">Watch the forecast time</span>
       </Link>
         </div>
     </section>
