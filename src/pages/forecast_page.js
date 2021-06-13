@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/pages.css';
-
+import WeatherCardForecast from '../components/weathercard_forecastcontainer.js'
 function ForeCastPage (){
   return(
     <main>
@@ -8,9 +8,8 @@ function ForeCastPage (){
       <div className="container text-center">
         <p>Write down the city you in which you would like to know the time</p>
       </div>
+      <WeatherCardForecast />
     </main>
-
-
   )
 }
 
