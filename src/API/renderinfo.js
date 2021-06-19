@@ -6,8 +6,9 @@
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-            return callback;
-            }) 
+            return data;
+            })
+            .then(data=> data.map(e=>(console.log(e))))
         } 
         catch(err){
             console.error(err.message)
