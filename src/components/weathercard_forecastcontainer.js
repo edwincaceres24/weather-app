@@ -16,7 +16,7 @@ class WeatherCardForecast extends Component{
 
     
     fetchForecastData = async (API)=>{
-        const mainAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=current,hourly,minutely&appid=${API}`;
+        const mainAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=current,hourly,minutely&units=metric&appid=${API}`;
         try {
             await fetch(mainAPI)
             .then(response => response.json())
@@ -68,6 +68,7 @@ render(){
                 </div>
             <div className="d-grid">
                 {this.state.data.time.map(card=><WeatherCard 
+                    key={this.state.data.time.indexOf(card)}
                     city={`Day ${this.state.data.time.indexOf(card)+1}`} 
                     country="America"
                     degree={card.temp.day}
