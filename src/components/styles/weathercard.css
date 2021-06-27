@@ -1,6 +1,6 @@
 .d-grid {
-        grid-template-columns: 1fr minmax(auto,50%);
-        gap:15px;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        gap:30px;
         margin-top:1.5rem;
         place-items: center;
 }

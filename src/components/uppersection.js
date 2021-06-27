@@ -25,7 +25,7 @@ class UpperSection extends Component {
             <h1 className="main-title mt-4">Simple Weather App</h1>
             <p >Here you can search a city</p>
             <form className="d-flex flex-row ">
-                <input  className="main--info-button" placeholder="Search for a city" id="city--selected" />
+                <input  className="main--info-button me-4" placeholder="Search for a city" id="city--selected" />
                 <Button clickevent={this.handleClick} />
             </form>
         </div>

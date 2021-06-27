@@ -36,7 +36,7 @@ class WeatherCardForecast extends Component{
             })
             .then(data=>data.map(e=>{
                 console.log(e)
-                console.log(data.indexOf(e))
+                return console.log(data.indexOf(e))
                 }
             ))
         } 
@@ -61,7 +61,7 @@ render(){
     }
     if(Boolean(this.state.data.time)){
     return(
-        <section className="container-fluid">
+        <section className="container">
             <div className="d-flex flex-column align-items-center">
             <p>This is the Weather for your City</p>
             <Button />

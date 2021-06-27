@@ -6,7 +6,7 @@ class Button extends Component{
     render(){
     return(
         <>
-            <button className="btn btn-danger ms-4" onClick={this.props.clickevent}>Submit</button>
+            <button className="btn btn-danger" onClick={this.props.clickevent}>Submit</button>
         </>
     )
     }
